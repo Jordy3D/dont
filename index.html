@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="css/magic.css">
     <link rel="stylesheet" href="css/index.css">
 
-    <!-- redirect to asktoask -->
-    <!-- <meta http-equiv="refresh" content="0; url=asktoask.html"> -->
+    <script>
+        if (window.location.href.indexOf("index.html") > -1)
+            window.location = window.location.href.replace("index.html", "");
+    </script>
 </head>
 
 <body>
