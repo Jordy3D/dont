@@ -6,6 +6,7 @@ A little bit of online etiquette for the modern age.
 ## TODO
 - [ ] Replace images and content with wholly original content
 - [ ] Add more etiquette behaviours
+  - [ ] Help people help you
 - [ ] Add more example conversations (that may load randomly)
 
 ## Credits

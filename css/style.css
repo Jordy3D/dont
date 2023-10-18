@@ -14,6 +14,7 @@
     font-weight: 700;
     src: local('gg sans'), url('https://fonts.cdnfonts.com/s/93931/gg sans Bold.woff') format('woff');
 }
+
 @font-face {
     font-family: 'gg sans Normal';
     font-style: normal;
@@ -32,7 +33,7 @@
 
 :root {
     --mainBG: #313338;
-    --mainDark1: #2b2d31;
+    --mainDark1: #2e3035;
     --mainDark2: #1e1f22;
     --mainColor: #fff;
 
@@ -50,6 +51,24 @@ body {
     color: var(--mainColor);
 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/* style scrollbar */
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--mainBG);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--mainDark2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--mainDark2);
 }
 
 /* 
@@ -89,11 +108,26 @@ a {
     color: var(--link);
 }
 
-.nav a {
-    margin: 0 0.5rem;
+header a {
     color: var(--mainColor);
+}
 
+.nav-toggle {
+    display: none;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav a {
     display: inline-block;
+    margin: 0 0.5rem;
+
+    min-width: fit-content;
 
     padding: 0.5rem;
 }
@@ -121,13 +155,17 @@ h1.dont {
  ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚═╝  ╚═══╝   ╚═╝    
  */
 
-.content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.content-wrapper {
     height: 100%;
 
     max-width: 1000px;
     margin: 0 auto;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
 }
 
 .content .do,
@@ -140,34 +178,30 @@ h1.dont {
     padding: 1em;
 }
 
-.content .dont
-{
+.content .dont {
     background: linear-gradient(to left, #ff000011 80%, #0000);
     border-right: 5px solid var(--mainDark2);
 }
-.content .do
-{
+
+.content .do {
     background: linear-gradient(to right, #00ff0011 80%, #0000);
 }
 
-.content h2
-{
+.content h2 {
     grid-column: 1 / -1;
 
     text-align: center;
 }
 
 .example,
-.script
-{
+.script {
     padding: 1em;
 
     font-family: 'Open Sans', sans-serif;
     font-weight: 200;
 }
 
-.script p
-{
+.script p {
     margin-bottom: 1em;
 }
 
@@ -180,8 +214,7 @@ h1.dont {
 ╚═════╝ ╚═╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝ 
 */
 
-.discord
-{
+.discord {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -196,8 +229,7 @@ h1.dont {
     box-shadow: 0 0 0.5em 0.1em var(--mainDark2), 0 0 0.5em 0.5em var(--mainDark1);
 }
 
-.message
-{
+.message {
     width: 100%;
     display: flex;
     gap: 0.5em;
@@ -205,18 +237,103 @@ h1.dont {
     padding: 0.5em;
 }
 
-.message .time
-{
+.message:hover {
+    background: var(--mainDark1);
+    border-radius: 0.5rem;
+}
+
+.message .time {
     font-size: 0.7em;
 }
 
-.message img
-{
+.message img {
     width: 32px;
     height: 32px;
     border-radius: 5rem;
 }
 
+
+
+/* 
+██████╗ ███████╗███████╗██████╗  ██████╗ ███╗   ██╗███████╗██╗██╗   ██╗███████╗
+██╔══██╗██╔════╝██╔════╝██╔══██╗██╔═══██╗████╗  ██║██╔════╝██║██║   ██║██╔════╝
+██████╔╝█████╗  ███████╗██████╔╝██║   ██║██╔██╗ ██║███████╗██║██║   ██║█████╗  
+██╔══██╗██╔══╝  ╚════██║██╔═══╝ ██║   ██║██║╚██╗██║╚════██║██║╚██╗ ██╔╝██╔══╝  
+██║  ██║███████╗███████║██║     ╚██████╔╝██║ ╚████║███████║██║ ╚████╔╝ ███████╗
+╚═╝  ╚═╝╚══════╝╚══════╝╚═╝      ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═╝  ╚═══╝  ╚══════╝
+*/
+
+@media screen and (max-width: 900px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content .dont {
+        background: linear-gradient(to top, #ff000011 80%, #0000);
+        border-bottom: 5px solid var(--mainDark2);
+        border-right: none;
+    }
+
+    .content .do {
+        background: linear-gradient(to bottom, #00ff0011 80%, #0000);
+    }
+}
+
+/* less than 550 */
+@media screen and (max-width: 550px) {
+    .nav {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: block;
+        width: 2rem;
+        height: 2rem;
+
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+
+        cursor: pointer;
+    }
+
+    .nav-toggle::before {
+        /* fill with burger menu unicode */
+        content: '\2630';
+        font-size: 2rem;
+        line-height: 2rem;
+        color: var(--mainColor);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-toggle.open::before {
+        /* fill with close menu unicode */
+        content: '\2715';
+    }
+
+    .nav.open {
+        display: flex;
+        position: absolute;
+        top: 2.8rem;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        background: var(--mainDark2);
+
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .nav a.active {
+        background: none;
+    }
+}
 
 
 
@@ -235,26 +352,27 @@ h1.dont {
    ╚═╝   ╚══════╝╚══════╝   ╚═╝   ╚═╝╚═╝  ╚═══╝ ╚═════╝ 
 */
 
-bodya
-{
-    .content { outline: 2px solid red; }
-    
+bodya {
+    .content {
+        outline: 2px solid red;
+    }
+
     .content .do,
     .content .dont {
         outline: 2px solid orangered;
     }
-    
+
     .example,
-    .script
-    {
+    .script {
         outline: 2px solid orange;
     }
-    
-    .discord { outline: 2px solid yellow; }
+
+    .discord {
+        outline: 2px solid yellow;
+    }
 
     .message,
-    .script p
-    {
+    .script p {
         outline: 2px solid green;
     }
 }

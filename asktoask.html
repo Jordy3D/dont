@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +11,11 @@
 
     <script src="js/script.js"></script>
 </head>
+
 <body>
     <header>
         <div class="logo">
-            <h1 class="dont">Don't</h1>
+            <h1 class="dont"><a href="index.html">Don't</a></h1>
             <span>Ask to Ask</span>
         </div>
         <div class="nav">
@@ -21,41 +23,50 @@
             <a class="active" href="asktoask.html">Ask to Ask</a>
             <a href="splitmessages.html">Split Messages</a>
         </div>
+        <div class="nav-toggle" onclick="toggleNav(this)"></div>
     </header>
-    
+
     <main>
-        <div class="content">
-            <div class="dont">
-                <h2>Don't ❌</h2>
-                <div class="example">
-                    <div class="discord">
+        <div class="content-wrapper">
+            <div class="content">
+                <div class="dont">
+                    <h2>Don't ❌</h2>
+                    <div class="example">
+                        <div class="discord">
+                        </div>
+                    </div>
+                    <div class="script">
+                        <p>
+                            By asking to ask like that, you're wasting time asking for permission to ask, when you could
+                            have just asked the question in the first place.
+                        </p>
+                        <p>
+                            Additionally, by asking a vague question like "Does anyone here know about computers?",
+                            you're forcing everyone to ask you to clarify what you mean, and then wait for you to ask a
+                            more specific question related to your problem.
+                        </p>
                     </div>
                 </div>
-                <div class="script">
-                    <p>
-                        By asking to ask like that, you're wasting time asking for permission to ask, when you could have just asked the question in the first place. 
-                    </p>
-                    <p>
-                        Additionally, by asking a vague question like "Does anyone here know about computers?", you're forcing everyone to ask you to clarify what you mean, and then wait for you to ask a more specific question related to your problem.
-                    </p>
-                </div>
-            </div>
-            <div class="do">
-                <h2>Do ✅</h2>
-                <div class="example">
-                    <div class="discord">
+                <div class="do">
+                    <h2>Do ✅</h2>
+                    <div class="example">
+                        <div class="discord">
+                        </div>
+                    </div>
+                    <div class="script">
+                        <p>
+                            Asking immediately allows anyone who sees the question to answer it more immediately, and
+                            allows you to get your answer sooner.
+                        </p>
+                        <p>
+                            By asking a more specific question, you're also allowing people to answer your question more
+                            easily, and you're not wasting anyone's time by forcing them to ask you to clarify what you
+                            mean.
+                        </p>
                     </div>
                 </div>
-                <div class="script">
-                    <p>
-                        Asking immediately allows anyone who sees the question to answer it more immediately, and allows you to get your answer sooner. 
-                    </p>
-                    <p>
-                        By asking a more specific question, you're also allowing people to answer your question more easily, and you're not wasting anyone's time by forcing them to ask you to clarify what you mean.
-                    </p>
-                </div>
             </div>
-        </div>        
+        </div>
     </main>
 
     <footer>
@@ -98,7 +109,7 @@
                 text: "I am trying to use my computer, but it's not displaying anything even though I have turned it on.",
                 time: "2:25PM",
                 imageUrl: "https://www.nohello.net/img/MxF06xdCHJ-128.webp",
-                delay: 8
+                delay: 4
             },
             {
                 name: "Tim",
@@ -144,4 +155,5 @@
         createMessages(doMessages, dontMessages);
     </script>
 </body>
+
 </html>

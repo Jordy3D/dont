@@ -1,0 +1,57 @@
+.bigdont
+{
+    font-size: 50pt;
+    text-align: center;
+}
+
+.dont-grid
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+
+    padding: 1rem;
+
+    height: 90%;
+}
+
+/* below 750px, make it a 2x2 grid */
+@media screen and (max-width: 750px)
+{
+    .dont-grid
+    {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+.content-wrapper .dont
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--mainDark1);
+    border-radius: 0.5rem;
+
+    font-size: 20pt;
+
+    color: var(--mainLight);
+    text-decoration: none;
+
+    text-align: center;
+}
+
+.content-wrapper .dont:hover
+{
+    background: var(--mainDark2);
+}
+
+.content-wrapper .dont.disabled
+{
+    pointer-events: none;
+
+    opacity: 0.5;
+}

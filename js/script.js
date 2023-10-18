@@ -42,5 +42,8 @@ function createMessages(doMessages, dontMessages) {
     });
 }
 
-// when page has loaded, create the messages
-// document.addEventListener("DOMContentLoaded", createMessages);
+function toggleNav(e) {
+    var nav = document.querySelector(".nav");
+    nav.classList.toggle("open");
+    e.classList.toggle("open");
+}
