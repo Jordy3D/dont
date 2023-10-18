@@ -1,0 +1,198 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+@font-face {
+    font-family: 'gg sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('gg sans'), url('https://fonts.cdnfonts.com/s/93931/gg sans Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'gg sans Normal';
+    font-style: normal;
+    font-weight: 400;
+    src: local('gg sans Normal'), url('https://fonts.cdnfonts.com/s/93931/gg sans Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'gg sans Medium';
+    font-style: normal;
+    font-weight: 500;
+    src: local('gg sans Medium'), url('https://fonts.cdnfonts.com/s/93931/gg sans Medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'gg sans SemiBold';
+    font-style: normal;
+    font-weight: 600;
+    src: local('gg sans SemiBold'), url('https://fonts.cdnfonts.com/s/93931/gg sans Semibold.woff') format('woff');
+}
+
+:root {
+    --mainBG: #313338;
+    --mainDark1: #2b2d31;
+    --mainDark2: #1e1f22;
+    --mainColor: #fff;
+
+    --link: #379df5;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--mainBG);
+    color: var(--mainColor);
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header,
+footer {
+    background-color: var(--mainDark2);
+}
+
+.logo {
+    display: flex;
+    align-items: flex-end;
+}
+
+header,
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    padding: 0.5rem;
+}
+
+header {
+    padding-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link);
+}
+
+.nav a {
+    margin: 0 0.5rem;
+    color: var(--mainColor);
+
+    display: inline-block;
+
+    padding: 0.5rem;
+}
+
+.nav a:is(:hover, :focus) {
+    background: var(--mainDark1);
+}
+
+.nav a.active {
+    background: var(--mainBG);
+}
+
+h1.dont {
+    /* set to small-caps case */
+    text-transform: uppercase;
+}
+
+
+
+/* content */
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.content .do,
+.content .dont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+}
+
+.example,
+.script
+{
+    padding: 1em;
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
+}
+
+.discord
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    font-family: 'gg sans Normal', sans-serif;
+
+    border-radius: 0.5rem;
+
+    box-shadow: 0 0 0.5em 0.1em var(--mainDark2), 0 0 0.5em 0.5em var(--mainDark1);
+}
+
+.message
+{
+    width: 100%;
+    display: flex;
+    gap: 0.5em;
+
+    padding: 0.5em;
+}
+
+.message .time
+{
+    font-size: 0.7em;
+}
+
+.discord img
+{
+    width: 32px;
+    height: 32px;
+    border-radius: 5rem;
+}
+
+
+
+
+
+
+
+
+
+
+/* testing */
+
+bodya
+{
+    .content {
+        outline: 2px solid red;
+    }
+    
+    .content .do,
+    .content .dont {
+        outline: 2px solid orangered;
+    }
+    
+    .example,
+    .script
+    {
+        outline: 2px solid orange;
+    }
+    
+    .discord
+    {
+        outline: 2px solid yellow;
+    }
+}

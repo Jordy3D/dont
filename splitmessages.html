@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don't | Split Messages</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/magic.css">
+
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="dont">Don't</h1>
+            <span>Split Messages</span>
+        </div>
+        <div class="nav">
+            <a href="sayhello.html">Say Hello</a>
+            <a href="asktoask.html">Ask to Ask</a>
+            <a class="active" href="splitmessages.html">Split Messages</a>
+        </div>
+    </header>
+    
+    <main>
+        <div class="content">
+            <div class="dont">
+                <div class="example">
+                    <div class="discord">
+                    </div>
+                </div>
+                <div class="script">
+                    <p>
+                        Tim had to wait for Keith to finish typing everything before he could start thinking about any sort of response to the question. Rather than being able to read it all at once, and not knowing when Keith was going to stop typing, Tim had to wait for the message to finish before he could start thinking about it.
+                    </p>
+                </div>
+            </div>
+            <div class="do">
+                <div class="example">
+                    <div class="discord">
+                    </div>
+
+                </div>
+                <div class="script">
+                    <p>
+                        It may seem like it takes more time to type out a longer message, but it actually takes less time overall. Tim can start thinking about the question as soon as he sees it, and can start typing a response while Keith is still typing the rest of the message.
+                    </p>
+                </div>
+            </div>
+        </div>        
+    </main>
+
+    <footer>
+        <p>Don't split your messages up and make us wait for you to finish!</p>
+        <p>Based on... experiencing people do this.</p>
+    </footer>
+
+    <script>
+        var dontMessages = [
+            // different messages: hey | so can you | like | help me with something? | I am stuck | I can't work this out
+            {
+                name: "Keith",
+                text: "Hey",
+                time: "2:15PM",
+                imageUrl: "https://www.nohello.net/img/MxF06xdCHJ-128.webp",
+                delay: 1
+            },
+            {
+                name: "Keith",
+                text: "So can you",
+                time: "2:15PM",
+                imageUrl: "https://www.nohello.net/img/MxF06xdCHJ-128.webp",
+                delay: 2
+            },
+            {
+                name: "Keith",
+                text: "Like",
+                time: "2:15PM",
+                imageUrl: "https://www.nohello.net/img/MxF06xdCHJ-128.webp",
+                delay: 1
+            },
+            {
+                name: "Keith",
+                text: "Help me with something?",
+                time: "2:16PM",
+                imageUrl: "https://www.nohello.net/img/MxF06xdCHJ-128.webp",
+                delay: 2
+            },
+           {
+                name: "Keith",
+                text: "I can't remember",
+                time: "2:17PM",
+                imageUrl: "https://www.nohello.net/img/MxF06xdCHJ-128.webp",
+                delay: 2
+            },
+            {
+                name: "Keith",
+                text: "where the meeting agenda is",
+                time: "2:17PM",
+                imageUrl: "https://www.nohello.net/img/MxF06xdCHJ-128.webp",
+                delay: 2
+            },
+            {
+                name: "Tim",
+                text: "oh, it's on the shared drive",
+                time: "2:20PM",
+                imageUrl: "https://www.nohello.net/img/CGi-z9VgRi-128.webp",
+                delay: 3
+            }
+        ];
+
+        var doMessages = [
+            {
+                name: "Dawn",
+                text: "Hey there! Can you help me with something? I can't remember where the meeting agenda is",
+                time: "2:15PM",
+                imageUrl: "https://www.nohello.net/img/4gebfK1xtc-128.webp",
+                delay: 4
+            },
+            {
+                name: "Tim",
+                text: "hi! it's on the shared drive",
+                time: "2:16PM",
+                imageUrl: "https://www.nohello.net/img/CGi-z9VgRi-128.webp",
+                delay: 3
+            },
+            {
+                name: "Dawn",
+                text: "Thanks!",
+                time: "2:16PM",
+                imageUrl: "https://www.nohello.net/img/4gebfK1xtc-128.webp",
+                delay: 1
+            },
+            {
+                name: "Tim",
+                text: "👌",
+                time: "2:16PM",
+                imageUrl: "https://www.nohello.net/img/CGi-z9VgRi-128.webp",
+                delay: 1
+            }
+        ];
+
+        // call createMessages from script.js
+        createMessages(doMessages, dontMessages);
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don't | Say Hello</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/magic.css">
+
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="dont">Don't</h1>
+            <span>Say Hello</span>
+        </div>
+        <div class="nav">
+            <a class="active" href="sayhello.html">Say Hello</a>
+            <a href="asktoask.html">Ask to Ask</a>
+            <a href="splitmessages.html">Split Messages</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="content">
+            <div class="dont">
+                <div class="example">
+                    <div class="discord">
+                    </div>
+                </div>
+                <div class="script">
+                    <p>
+                        Note that Keith could have got his answer minutes sooner, and needn't have kept Tim waiting. In
+                        fact, Tim could have started thinking about the question right away!
+                    </p>
+                </div>
+            </div>
+            <div class="do">
+                <div class="example">
+                    <div class="discord">
+                    </div>
+
+                </div>
+                <div class="script">
+                    <p>
+                        If you feel it's a bit brusque to simply say "Hi" and ask the question, you can still preface
+                        your message with as many pleasantries as you see fit.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+ 
+    <footer>
+        <p>Don't just say hello... Get to the point!</p>
+        <p>Based on <a href="https://www.nohello.net/">nohello.net</a></p>
+    </footer>
+
+    <script>
+        var dontMessages = [
+            {
+                name: "Keith",
+                text: "hi",
+                time: "2:15PM",
+                imageUrl: "https://www.nohello.net/img/MxF06xdCHJ-128.webp",
+                delay: 1
+            },
+            {
+                name: "Tim",
+                text: "..?",
+                time: "2:19PM",
+                imageUrl: "https://www.nohello.net/img/CGi-z9VgRi-128.webp",
+                delay: 4
+            },
+            {
+                name: "Keith",
+                text: "what time was that thing again?",
+                time: "2:20PM",
+                imageUrl: "https://www.nohello.net/img/MxF06xdCHJ-128.webp",
+                delay: 1
+            },
+            {
+                name: "Tim",
+                text: "oh - 3:30",
+                time: "2:20PM",
+                imageUrl: "https://www.nohello.net/img/CGi-z9VgRi-128.webp",
+                delay: 1
+            }
+        ];
+
+        var doMessages = [
+            {
+                name: "Dawn",
+                text: "Hiya! What time was that thing?",
+                time: "2:15PM",
+                imageUrl: "https://www.nohello.net/img/4gebfK1xtc-128.webp",
+                delay: 1
+            },
+            {
+                name: "Tim",
+                text: "hey, 3:30",
+                time: "2:15PM",
+                imageUrl: "https://www.nohello.net/img/CGi-z9VgRi-128.webp",
+                delay: 1
+            },
+            {
+                name: "Dawn",
+                text: "Ta - seeya then!",
+                time: "2:15PM",
+                imageUrl: "https://www.nohello.net/img/4gebfK1xtc-128.webp",
+                delay: 1
+            },
+            {
+                name: "Tim",
+                text: "👌 np!",
+                time: "2:15PM",
+                imageUrl: "https://www.nohello.net/img/CGi-z9VgRi-128.webp",
+                delay: 1
+            }
+        ];
+
+        // call createMessages from script.js
+        createMessages(doMessages, dontMessages);
+    </script>
+</body>
+
+</html>
