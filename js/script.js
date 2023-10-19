@@ -47,3 +47,15 @@ function toggleNav(e) {
     nav.classList.toggle("open");
     e.classList.toggle("open");
 }
+
+function checkNavFlex() {
+    var nav = document.querySelector(".nav");
+
+    var firstElement = nav.children[0];
+    var lastElement = nav.children[nav.children.length - 1];
+    if (firstElement.offsetTop != lastElement.offsetTop)
+        nav.classList.add("burger");
+    else
+        nav.classList.remove("burger");
+}
+

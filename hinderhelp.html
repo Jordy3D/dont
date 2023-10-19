@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Don't | Say Hello</title>
+
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/magic.css" />
+
+		<script src="js/script.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<div class="logo">
+				<h1 class="dont"><a href="index.html">Don't</a></h1>
+				<span>Hinder Help</span>
+			</div>
+			<div class="nav">
+				<a href="sayhello.html">Say Hello</a>
+				<a href="asktoask.html">Ask to Ask</a>
+				<a href="splitmessages.html">Split Messages</a>
+				<a class="active" href="hinderhelp.html">Hinder Help</a>
+			</div>
+			<div class="nav-toggle" onclick="toggleNav(this)"></div>
+            <script>checkNavFlex();</script>
+		</header>
+
+		<main>
+			<div class="content-wrapper">
+				<div class="content">
+					<div class="dont">
+						<h2>Don't ❌</h2>
+						<div class="example">
+							<div class="discord"></div>
+						</div>
+						<div class="script">
+							<p>
+								By not telling Tim what he's already tried, Keith is wasting
+								both his and Tim's time starting off with repeat suggestions.
+							</p>
+							<p>
+								Not only is that time-wasting and annoying, it also actively
+								hinders the support process because it often brews dicontent
+								from the person seeking help, being told to do things they've
+								already done.
+							</p>
+						</div>
+					</div>
+					<div class="do">
+						<h2>Do ✅</h2>
+						<div class="example">
+							<div class="discord"></div>
+						</div>
+						<div class="script">
+							<p>
+								By immediately telling Tim the things she did, Dawn has not only
+								sped up the support process but also shown that she's not simply
+								given up as soon as she encountered a problem.
+							</p>
+							<p>
+								She has shown that she is not only more ready to receive further help and
+								more likely to act on it, but be more likely to listen in the
+								first place.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<p>Don't get in the way of others helping you... Help them to help you!</p>
+            <p>Based on... experiencing people do this.</p>
+		</footer>
+
+		<script>
+			var dontMessages = [
+				{
+					name: "Keith",
+					text: "My computer isn't working",
+					time: "2:15PM",
+					imageUrl: "https://www.nohello.net/img/MxF06xdCHJ-128.webp",
+					delay: 1,
+				},
+				{
+					name: "Tim",
+					text: "have you tried turning it on? is it plugged in? is your monitor turned on?",
+					time: "2:17PM",
+					imageUrl: "https://www.nohello.net/img/CGi-z9VgRi-128.webp",
+					delay: 2,
+				},
+				{
+					name: "Keith",
+					text: "I've already tried all that.",
+					time: "2:18PM",
+					imageUrl: "https://www.nohello.net/img/MxF06xdCHJ-128.webp",
+					delay: 1,
+				},
+				{
+					name: "Tim",
+					text: "i wish you'd have said that already...",
+					time: "2:20PM",
+					imageUrl: "https://www.nohello.net/img/CGi-z9VgRi-128.webp",
+					delay: 1,
+				},
+			];
+
+			var doMessages = [
+				{
+					name: "Dawn",
+					text: "Hey! My computer doesn't seem to be working. I've checked that it's plugged in and that the monitor is on, but when I push the power button nothing happens.",
+					time: "2:15PM",
+					imageUrl: "https://www.nohello.net/img/4gebfK1xtc-128.webp",
+					delay: 3,
+				},
+				{
+					name: "Tim",
+					text: "Oh, hey. Might sound silly, but is the powerpoint turned on?",
+					time: "2:15PM",
+					imageUrl: "https://www.nohello.net/img/CGi-z9VgRi-128.webp",
+					delay: 1,
+				},
+				{
+					name: "Dawn",
+					text: "Oh, whoops, forgot about that! Thanks!",
+					time: "2:16PM",
+					imageUrl: "https://www.nohello.net/img/4gebfK1xtc-128.webp",
+					delay: 1,
+				},
+				{
+					name: "Tim",
+					text: "👌 np!",
+					time: "2:16PM",
+					imageUrl: "https://www.nohello.net/img/CGi-z9VgRi-128.webp",
+					delay: 1,
+				},
+			];
+
+			// call createMessages from script.js
+			createMessages(doMessages, dontMessages);
+		</script>
+	</body>
+</html>
