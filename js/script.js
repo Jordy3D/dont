@@ -59,3 +59,41 @@ function checkNavFlex() {
         nav.classList.remove("burger");
 }
 
+
+// when page has loaded
+
+// load in nav from an array, marking the current page as active
+var pages = [
+    ["Say Hello", "sayhello.html"],
+    ["Ask to Ask", "asktoask.html"],
+    ["Split Messages", "splitmessages.html"],
+    ["Hinder Help", "hinderhelp.html"],
+    ["Leave Out Information", "leaveoutinformation.html"]
+];
+
+var indexPadding = 6;
+
+function loadNav() {
+    var navHtml = "";
+    for (var i = 0; i < pages.length; i++) {
+        let currentPage = window.location.pathname.split("/").pop();
+        navHtml += `<a href="${pages[i][1]}"${pages[i][1] == currentPage ? ` class="active"` : ""}>${pages[i][0]}</a>`;
+    }
+    document.getElementsByClassName("nav")[0].innerHTML = navHtml;
+}
+
+function loadIndexPageOptions() {
+    var optionsHtml = "";
+    let pageCount = Math.max(indexPadding, pages.length);
+    
+    for (var i = 0; i < pageCount; i++) {
+        let hasPage = pages[i] != undefined;
+        // href=`${pages[i][1]}" class="dont"' : 'class="dont disabled"
+        optionsHtml += `
+        <a ${hasPage ? `href="${pages[i][1]}" class="dont"` : ' class="dont disabled"'}>
+            <p>${hasPage ? pages[i][0] : ""}</p>
+        </a>`
+    }
+
+    document.getElementsByClassName("dont-grid")[0].innerHTML = optionsHtml;
+}

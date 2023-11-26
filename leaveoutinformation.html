@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Don't | Leave Out Information</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/magic.css" />
+
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="dont"><a href="index.html">Don't</a></h1>
+            <span>Leave Out Information</span>
+        </div>
+        <div class="nav"></div>
+        <div class="nav-toggle" onclick="toggleNav(this)"></div>
+        <script>loadNav();</script>
+        <script>checkNavFlex();</script>
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+            <div class="content">
+                <div class="dont">
+                    <h2>Don't ❌</h2>
+                    <div class="example">
+                        <div class="discord"></div>
+                    </div>
+                    <div class="script">
+                        <p>
+                            By not telling Tim relevant information to his query, Keith is wasting both his and TIm's
+                            time by making Tim ask for more information.
+                        </p>
+                        <p>
+                            Not only is that time-wasting and annoying, it also actively
+                            hinders the support process because it often brews dicontent
+                            from the person seeking help, being asked to clarify every piece of relevant information.
+                        </p>
+                    </div>
+                </div>
+                <div class="do">
+                    <h2>Do ✅</h2>
+                    <div class="example">
+                        <div class="discord"></div>
+                    </div>
+                    <div class="script">
+                        <p>
+                            By immediately telling Tim relevant information to her query, Dawn is saving both her and Tim's time by not making Tim ask for more information.
+                        </p>
+                        <p>
+                            She has shown that she is actually prepared to receive suggestions and not just keep shooting them down because of some information she didn't give in the first place.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Don't leave out information when asking for help from someone... Help them to help you!</p>
+        <p>Based on... experiencing people do this.</p>
+    </footer>
+
+    <script>
+        var dontMessages = [
+            {
+                name: "Keith",
+                text: "Can anyone recommend a good office printer that's mid-price?",
+                time: "9:49AM",
+                imageUrl: "https://www.nohello.net/img/MxF06xdCHJ-128.webp",
+                delay: 1,
+            },
+            {
+                name: "Tim",
+                text: "What is mid-priced to you?",
+                time: "9:50AM",
+                imageUrl: "https://www.nohello.net/img/CGi-z9VgRi-128.webp",
+                delay: 2,
+            },
+            {
+                name: "Keith",
+                text: "Not too expensive, but not too cheap either.",
+                time: "9:52AM",
+                imageUrl: "https://www.nohello.net/img/MxF06xdCHJ-128.webp",
+                delay: 1,
+            },
+            {
+                name: "Keith",
+                text: "Not cheap and low quality, but below 2k",
+                time: "9:53AM",
+                imageUrl: "https://www.nohello.net/img/MxF06xdCHJ-128.webp",
+                delay: 1,
+            },
+            {
+                name: "Tim",
+                text: "What currency? We're not all from the same country.",
+                time: "9:54AM",
+                imageUrl: "https://www.nohello.net/img/CGi-z9VgRi-128.webp",
+                delay: 2,
+            },
+            {
+                name: "Keith",
+                text: "Dollars.",
+                time: "9:55AM",
+                imageUrl: "https://www.nohello.net/img/MxF06xdCHJ-128.webp",
+                delay: 1,
+            },
+            {
+                name: "Tim",
+                text: "Again, what currency? There are multiple countries that use dollars.",
+                time: "9:56AM",
+                imageUrl: "https://www.nohello.net/img/CGi-z9VgRi-128.webp",
+                delay: 2,
+            },
+            {
+                name: "Keith",
+                text: "US Dollars.",
+                time: "9:57AM",
+                imageUrl: "https://www.nohello.net/img/MxF06xdCHJ-128.webp",
+                delay: 1,
+            },
+            {
+                name: "Tim",
+                text: "I wish you'd have said that earlier...",
+                time: "9:58AM",
+                imageUrl: "https://www.nohello.net/img/CGi-z9VgRi-128.webp",
+                delay: 1,
+            }
+        ];
+
+        var doMessages = [
+            {
+                name: "Dawn",
+                text: "Hey! Does anyone know a good office printer that's around 2k USD? Even better if it's between 1.5k and 2k.",
+                time: "9:50AM",
+                imageUrl: "https://www.nohello.net/img/4gebfK1xtc-128.webp",
+                delay: 3,
+            },
+            {
+                name: "Tim",
+                text: "Hey, I've heard good things about the one from X company.",
+                time: "9:51AM",
+                imageUrl: "https://www.nohello.net/img/CGi-z9VgRi-128.webp",
+                delay: 1,
+            },
+            {
+                name: "Dawn",
+                text: "Thanks! I'll check it out.",
+                time: "9:52AM",
+                imageUrl: "https://www.nohello.net/img/4gebfK1xtc-128.webp",
+                delay: 1,
+            },
+            {
+                name: "Tim",
+                text: "👌 np!",
+                time: "9:53AM",
+                imageUrl: "https://www.nohello.net/img/CGi-z9VgRi-128.webp",
+                delay: 1,
+            },
+        ];
+
+        // call createMessages from script.js
+        createMessages(doMessages, dontMessages);
+    </script>
+</body>
+
+</html>

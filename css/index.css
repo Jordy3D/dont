@@ -6,27 +6,32 @@
 
 .dont-grid
 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
     gap: 1rem;
+    /* grid-template-columns: repeat(3, 1fr); */
 
     padding: 1rem;
 
-    height: 90%;
+    min-height: 90%;
 }
 
-/* below 750px, make it a 2x2 grid */
-@media screen and (max-width: 750px)
+.content-wrapper
 {
-    .dont-grid
-    {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-    }
+    min-height: 100%;
 }
 
 .content-wrapper .dont
 {
+    max-width: 30%;
+    width: 300px;
+    height: auto;
+    max-height: 300px;
+    aspect-ratio: 1/1 !important;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,6 +47,16 @@
 
     text-align: center;
 }
+
+/* below 750px, make it a 2x2 grid */
+@media screen and (max-width: 750px)
+{
+    .content-wrapper .dont
+    {
+        max-width: 45%;
+    }
+}
+
 
 .content-wrapper .dont:hover
 {

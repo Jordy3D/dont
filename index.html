@@ -14,6 +14,7 @@
         if (window.location.href.indexOf("index.html") > -1)
             window.location = window.location.href.replace("index.html", "");
     </script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -28,25 +29,8 @@
     <main>
         <div class="content-wrapper">
             <h1 class="bigdont">Don't:</h1>
-            <div class="dont-grid">
-                <a href="sayhello.html" class="dont">
-                    <p>Say Hello</p>
-                </a>
-                <a href="asktoask.html" class="dont">
-                    <p>Ask to Ask</p>
-                </a>
-                <a href="splitmessages.html" class="dont">
-                    <p>Split Messages</p>
-                </a>
-                <a href="hinderhelp.html" class="dont">
-                    <p>Hinder Help</p>
-                </a>
-                <a href="" class="dont disabled"></a>
-                <a href="" class="dont disabled"></a>
-                <a href="" class="dont disabled"></a>
-                <a href="" class="dont disabled"></a>
-                <a href="" class="dont disabled"></a>
-            </div>
+            <div class="dont-grid"></div>
+            <script>loadIndexPageOptions()</script>
         </div>
     </main>
 
