@@ -71,6 +71,11 @@ var pages = [
     ["Leave Out Information", "leaveoutinformation.html"]
 ];
 
+function editPagesForGitHub() {
+    for (var i = 0; i < pages.length; i++)
+        pages[i][1] = pages[i][1].replace(".html", "");   
+}
+
 var indexPadding = 6;
 
 function loadNav() {
