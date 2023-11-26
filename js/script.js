@@ -71,7 +71,10 @@ var pages = [
     ["Leave Out Information", "leaveoutinformation.html"]
 ];
 
+editPagesForGitHub();
 function editPagesForGitHub() {
+    if (!window.location.hostname.includes("github.io")) return;
+
     for (var i = 0; i < pages.length; i++)
         pages[i][1] = pages[i][1].replace(".html", "");   
 }
