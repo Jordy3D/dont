@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don't | Not Follow Up</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/magic.css">
+
+    <script src="js/script.js"></script>
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Don't">
+    <meta property="og:description" content="Not Follow Up">
+    <meta property="og:image" content="https://jordy3d.github.io/files/logo.png">
+    <meta property="og:url" content="https://jordy3d.github.io/dont/notfollowup">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="dont"><a href="index.html">Don't</a></h1>
+            <span>Not Follow Up</span>
+        </div>
+        <div class="nav"></div>
+        <div class="nav-toggle" onclick="toggleNav(this)"></div>
+        <script>loadNav();</script>
+        <script>checkNavFlex();</script>
+    </header>
+    
+    <main>
+        <div class="content-wrapper">
+            <div class="content">
+                <div class="dont">
+                    <h2>Don't ❌</h2>
+                    <div class="example">
+                        <div class="discord">
+                        </div>
+                    </div>
+                    <div class="script">
+                        <p>
+                            Tim was providing support to Keith with a problem he was having, trying to figure out what was wrong. Keith fixed the problem, but didn't tell Tim what the solution was.
+                        </p>
+                        <p>
+                            As a result, Tim doesn't know what the resolution was, and can't help anyone else who might have the same problem, or even help Keith again if he has the same problem.
+                        </p>
+                        <p>
+                            If this was a public forum, then anyone else who has the same problem won't be able to find the solution either.
+                        </p>
+                    </div>
+                </div>
+                <div class="do">
+                    <h2>Do ✅</h2>
+                    <div class="example">
+                        <div class="discord">
+                        </div>
+                    </div>
+                    <div class="script">
+                        <p>
+                            Because Keith told Tim what the solution was, Tim can now help anyone else who has the same problem, or add the solution to a combined knowledge base or general recommendation for the future.
+                        </p>
+                        <p>
+                            If this was in a public forum, then even more people can benefit from the solution, as it would be recorded for anyone to find.                             
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Don't leave us hanging, tell us what happend!</p>
+        <p>Based on... <a href="https://github.com/Jordy3D/dont/issues/1>">a community request!</a></p>
+    </footer>
+
+    <script>
+        var dontMessages = [
+            // different messages: no connection | is your ethernet cable plugged in | yeah | have you tried restarting your computer or the router? | yeah, didn't work either | delay of 3 | nevermind, fixed it
+            {
+                name: "Keith",
+                text: "Hey Tim, I can't connect to the internet",
+                time: "2:15PM",
+                imageUrl: "https://www.nohello.net/img/MxF06xdCHJ-128.webp",
+                delay: 1
+            },
+            {
+                name: "Tim",
+                text: "Have you tried restarting your computer or the router?",
+                time: "2:17PM",
+                imageUrl: "https://www.nohello.net/img/CGi-z9VgRi-128.webp",
+                delay: 2
+            },
+            {
+                name: "Keith",
+                text: "Yeah, didn't work",
+                time: "2:17PM",
+                imageUrl: "https://www.nohello.net/img/MxF06xdCHJ-128.webp",
+                delay: 1
+            },
+            {
+                name: "Keith",
+                text: "Nevermind, fixed it",
+                time: "2:20PM",
+                imageUrl: "https://www.nohello.net/img/MxF06xdCHJ-128.webp",
+                delay: 4
+            }
+        ];
+
+        var doMessages = [
+            // 
+            {
+                name: "Dawn",
+                text: "Hey Tim, I'm having trouble with my internet connection. Can you help me?",
+                time: "2:15PM",
+                imageUrl: "https://www.nohello.net/img/4gebfK1xtc-128.webp",
+                delay: 1
+            },
+            {
+                name: "Tim",
+                text: "Have you tried restarting your computer or the router?",
+                time: "2:16PM",
+                imageUrl: "https://www.nohello.net/img/CGi-z9VgRi-128.webp",
+                delay: 2
+            },
+            {
+                name: "Dawn",
+                text: "Yeah, didn't seem to work",
+                time: "2:16PM",
+                imageUrl: "https://www.nohello.net/img/4gebfK1xtc-128.webp",
+                delay: 1
+            },
+            {
+                name: "Dawn",
+                text: "Nevermind, silly me, I forgot to plug in the ethernet cable",
+                time: "2:18PM",
+                imageUrl: "https://www.nohello.net/img/4gebfK1xtc-128.webp",
+                delay: 4
+            },
+            {
+                name: "Tim",
+                text: "Haha, no worries, glad you got it sorted",
+                time: "2:20PM",
+                imageUrl: "https://www.nohello.net/img/CGi-z9VgRi-128.webp",
+                delay: 3
+            }
+        ];
+
+        // call createMessages from script.js
+        createMessages(doMessages, dontMessages);
+    </script>
+</body>
+
+</html>

@@ -68,7 +68,8 @@ var pages = [
     ["Ask to Ask", "asktoask.html"],
     ["Split Messages", "splitmessages.html"],
     ["Hinder Help", "hinderhelp.html"],
-    ["Leave Out Information", "leaveoutinformation.html"]
+    ["Leave Out Information", "leaveoutinformation.html"],
+    ["Not Follow Up", "notfollowup.html"],
 ];
 
 editPagesForGitHub();
